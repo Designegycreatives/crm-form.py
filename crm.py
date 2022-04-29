@@ -6,7 +6,7 @@ import base64
 
 
 # Adding Animation at the top of webapp
-file_ = open("image.gif", "rb")
+file_ = open("image_1.png", "rb")
 contents = file_.read()
 data_url = base64.b64encode(contents).decode("utf-8")
 file_.close()
@@ -16,9 +16,6 @@ st.markdown(
      unsafe_allow_html=True
 )
 
-
-# Styling side bar with image
-st.sidebar.image("image_1.png", use_column_width=True)
 
 
 
