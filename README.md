@@ -6,7 +6,7 @@
 ---
 #### This Web app is built on Streamlit with Python Programming as a CRM App
 
-#### This web app was built to store and retrieve Pink Data Hub CRM 
+#### This web app is built to store and retrieve Pink Data Hub CRM 
 
 #### Animation Files
 - [Lottie](https://lottiefiles.com/)
