@@ -24,7 +24,7 @@ st.sidebar.image("image_1.png", use_column_width=True)
 
 st.header("Pink Data Hub CRM")
 
-pink_data = st.sidebar.selectbox("choose:",("Chose","Database", "Database Connection")
+pink_data = st.sidebar.selectbox("choose:",("Chose","Database", "Database Connection"))
 
 
 deta = Deta(st.secrets["deta_key"])
