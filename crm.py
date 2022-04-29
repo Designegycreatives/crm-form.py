@@ -2,6 +2,23 @@ import streamlit as st
 import pandas as pd
 from deta import Deta
 import json
+import base64
+
+
+# Adding Animation at the top of webapp
+file_ = open("image.gif", "rb")
+contents = file_.read()
+data_url = base64.b64encode(contents).decode("utf-8")
+file_.close()
+
+st.markdown(
+    f'<img src="data:image/gif;base64,{data_url}" alt="dashboard gif">',
+     unsafe_allow_html=True
+)
+
+
+# Styling side bar with image
+st.sidebar.image("image_1.png", use_column_width=True)
 
 
 
