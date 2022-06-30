@@ -5,9 +5,10 @@ import json
 import base64
 from PIL import Image
 
-image = Image.open('image_1.png')
-image1 = Image.open('image1.png')
+image = Image.open('image1.png')
+
 col1, col2 = st.columns(2)
+col3, col4 = st.columns(2)
 
 col1.header("Pink Data Hub CRM")
 
@@ -25,11 +26,11 @@ db = deta.Base("CRM-Records")
           
 
 with st.form("Submit", clear_on_submit=True):
-     id_name = col1.text_input("Company's ID")
-     name = col2.text_input("Company's Name")
-     phone = col2.text_input("Company's Phone Number")
-     email = col2.text_input("Company's Email Address")
-     location = col1.text_input("Company's Location")
+     id_name = col3.text_input("Company's ID")
+     name = col4.text_input("Company's Name")
+     phone = col3.text_input("Company's Phone Number")
+     email = col4.text_input("Company's Email Address")
+     location = col3.text_input("Company's Location")
      submitted = st.form_submit_button("Submit")
      if submitted:
         st.write("Submitted Successfully")
