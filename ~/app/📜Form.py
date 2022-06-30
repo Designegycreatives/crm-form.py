@@ -16,7 +16,7 @@ col1.write("A form app with DETA.SH Database")
 
 col2.image(image)
 
-col1.image(image1)
+
 
 
 deta = Deta(st.secrets["deta_key"])
