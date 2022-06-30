@@ -20,13 +20,14 @@ deta = Deta(st.secrets["deta_key"])
 db = deta.Base("CRM-Records")
  
           
-if pink_data == "Database":
-          with st.form("Submit", clear_on_submit=True):
-               id_name = st.text_input("Company's ID")
-               name = st.text_input("Company's Name")
-               phone = st.text_input("Company's Phone Number")
-               email = st.text_input("Company's Email Address")
-               location = st.text_input("Company's Location")
-               submitted = st.form_submit_button("Submit")
-               if submitted:
-                     db.put({"company_id":id_name, "company_name":name, "email_address":email, "location":location})
+
+with st.form("Submit", clear_on_submit=True):
+     id_name = col1.text_input("Company's ID")
+     name = col2.text_input("Company's Name")
+     phone = col1.text_input("Company's Phone Number")
+     email = col2.text_input("Company's Email Address")
+     location = col1.text_input("Company's Location")
+     submitted = col2.form_submit_button("Submit")
+     if submitted:
+        st.write("Submitted Successfully")
+        db.put({"company_id":id_name, "company_name":name, "email_address":email, "location":location})
