@@ -30,7 +30,7 @@ with st.form("Submit", clear_on_submit=True):
      phone = col1.text_input("Company's Phone Number")
      email = col2.text_input("Company's Email Address")
      location = col1.text_input("Company's Location")
-     submitted = col2.form_submit_button("Submit")
+     submitted = st.form_submit_button("Submit")
      if submitted:
         st.write("Submitted Successfully")
         db.put({"company_id":id_name, "company_name":name, "email_address":email, "location":location})
