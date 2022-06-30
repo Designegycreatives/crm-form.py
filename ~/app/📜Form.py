@@ -10,9 +10,10 @@ image = Image.open('image_1.png')
 col1, col2 = st.columns(2)
 
 col1.header("Pink Data Hub CRM")
+col1.write("A form app with DETA.SH Database")
 col2.image(image)
 
-pink_data = st.sidebar.selectbox("choose:",("Chose","Database", "Database Connection"))
+
 
 
 deta = Deta(st.secrets["deta_key"])
