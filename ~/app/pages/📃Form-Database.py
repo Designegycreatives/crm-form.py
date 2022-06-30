@@ -5,7 +5,7 @@ import json
 import base64
 from PIL import Image
 
-image = Image.open('image_1.png')
+image = Image.open('image1.png')
 
 col1, col2 = st.columns(2)
 
